@@ -1,0 +1,16 @@
+digraph G{
+	train[label="train.py"]
+	vis[label="visualize.py"]
+	LoadData[shape="diamond"]
+	Visualize[shape="diamond"]
+	GTDatabase[shape="doubleoctagon"]
+	subgraph cluster_load{
+		train -> LoadData
+	}
+	LoadData -> GTDatabase
+	subgraph cluster_visualize{
+		vis -> Visualize
+	}
+	Visualize -> GTDatabase
+
+}

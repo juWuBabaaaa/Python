@@ -1,0 +1,165 @@
+ def get_thresholds(scores: np.ndarray, num_gt, num_sample_pts=41):
+======
+Loading NuScenes tables for version v1.0-trainval...
+23 category,
+8 attribute,
+4 visibility,
+64386 instance,
+12 sensor,
+10200 calibrated_sensor,
+2631083 ego_pose,
+68 log,
+850 scene,
+34149 sample,
+2631083 sample_data,
+1166187 sample_annotation,
+4 map,
+Done loading in 21.778 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 5.5 seconds.
+======
+total scene num: 850
+exist scene num: 850
+train scene: 700, val scene: 150
+[>>                                                ] 1448/34149, 33.9 task[>>                                                ] 1449/34149, 33.9 task[         [>                  [>                            ] 1687/3[>[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 34149/34149, 25.5 task/s, elapsed: 1337s, ETA:     0s[>>>                                               ] 2479/34149, 31.8 task/s, elapsed: 78s, ETA:   995s7s
+train sample: 28130, val sample: 6019
+./data/nuscenes/nuscenes_infos_train.pkl will be modified.
+Warning, you may overwriting the original data ./data/nuscenes/nuscenes_infos_train.pkl.
+Reading from input file: ./data/nuscenes/nuscenes_infos_train.pkl.
+======
+Loading NuScenes tables for version v1.0-trainval...
+23 category,
+8 attribute,
+4 visibility,
+64386 instance,
+12 sensor,
+10200 calibrated_sensor,
+2631083 ego_pose,
+68 log,
+850 scene,
+34149 sample,
+2631083 sample_data,
+1166187 sample_annotation,
+4 map,
+Done loading in 30.613 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 5.5 seconds.
+======
+Start updating:
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 28130/28130, 15.3 task/s, elapsed: 1839s, ETA:     0s
+Writing to output file: ./data/nuscenes/nuscenes_infos_train.pkl.
+ignore classes: set()
+./data/nuscenes/nuscenes_infos_val.pkl will be modified.
+Warning, you may overwriting the original data ./data/nuscenes/nuscenes_infos_val.pkl.
+Reading from input file: ./data/nuscenes/nuscenes_infos_val.pkl.
+======
+Loading NuScenes tables for version v1.0-trainval...
+23 category,
+8 attribute,
+4 visibility,
+64386 instance,
+12 sensor,
+10200 calibrated_sensor,
+2631083 ego_pose,
+68 log,
+850 scene,
+34149 sample,
+2631083 sample_data,
+1166187 sample_annotation,
+4 map,
+Done loading in 91.692 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 5.5 seconds.
+======
+Start updating:
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 6019/6019, 16.6 task/s, elapsed: 364s, ETA:     0s
+Writing to output file: ./data/nuscenes/nuscenes_infos_val.pkl.
+ignore classes: set()
+Create GT Database of NuScenesDataset
+10/31 10:22:13 - mmengine - INFO - ------------------------------
+10/31 10:22:13 - mmengine - INFO - The length of the dataset: 28130
+10/31 10:22:13 - mmengine - INFO - The number of instances per category in the dataset:
++----------------------+--------+
+| category             | number |
++----------------------+--------+
+| car                  | 413318 |
+| truck                | 72815  |
+| trailer              | 20701  |
+| bus                  | 13163  |
+| construction_vehicle | 11993  |
+| bicycle              | 9478   |
+| motorcycle           | 10109  |
+| pedestrian           | 185847 |
+| traffic_cone         | 82362  |
+| barrier              | 125095 |
++----------------------+--------+
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 28130/28130, 16.0 task/s, elapsed: 1758s, ETA:     0s
+load 62964 traffic_cone database infos
+load 65262 truck database infos
+load 339949 car database infos
+load 161928 pedestrian database infos
+load 133804 barrier database infos
+load 11050 construction_vehicle database infos
+load 8846 motorcycle database infos
+load 8185 bicycle database infos
+load 12286 bus database infos
+load 19202 trailer database infos
+======
+Loading NuScenes tables for version v1.0-test...
+23 category,
+8 attribute,
+4 visibility,
+0 instance,
+12 sensor,
+1800 calibrated_sensor,
+462901 ego_pose,
+15 log,
+150 scene,
+6008 sample,
+462901 sample_data,
+0 sample_annotation,
+4 map,
+Done loading in 3.246 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.6 seconds.
+======
+total scene num: 150
+exist scene num: 150
+test scene: 150
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 6008/6008, 766.1 task/s, elapsed: 8s, ETA:     0s
+test sample: 6008
+./data/nuscenes/nuscenes_infos_test.pkl will be modified.
+Warning, you may overwriting the original data ./data/nuscenes/nuscenes_infos_test.pkl.
+Reading from input file: ./data/nuscenes/nuscenes_infos_test.pkl.
+======
+Loading NuScenes tables for version v1.0-test...
+23 category,
+8 attribute,
+4 visibility,
+0 instance,
+12 sensor,
+1800 calibrated_sensor,
+462901 ego_pose,
+15 log,
+150 scene,
+6008 sample,
+462901 sample_data,
+0 sample_annotation,
+4 map,
+Done loading in 3.501 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.6 seconds.
+======
+Start updating:
+[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 6008/6008, 1132.5 task/s, elapsed: 5s, ETA:     0s
+Writing to output file: ./data/nuscenes/nuscenes_infos_test.pkl.
+ignore classes: set()
+(det3d) wsx@wsx-Lenovo-Legion-R9000P2021H:~/pointcloud_research/mmdetection3d$ 
+(det3d) wsx@wsx-Lenovo-Legion-R9000P2021H:~/pointcloud_research/mmdetection3d$ 
+
+

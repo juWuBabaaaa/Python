@@ -1,0 +1,169 @@
+graph G {
+	rankdir="LR"
+	subgraph cluster_calibrated_sensor {
+		calibrated_sensor -- calibrated_sensor_token
+		calibrated_sensor -- sensor_token
+		calibrated_sensor -- translation
+		calibrated_sensor -- rotation
+		calibrated_sensor -- camera_intrinsic
+		label="calibrated_sesnsor"
+		graph[style=dashed];
+	}
+	subgraph cluster_category {
+		category -- category_token
+		category -- category_name
+		category -- category_description
+		label="category"
+		graph[style=dashed]
+	}
+	subgraph cluster_sample_annotation {
+		sample_annotation -- sample_annotation_token
+		sample_annotation -- sample_token
+		sample_annotation -- instance_token
+		sample_annotation -- visibility_token
+		sample_annotation -- attribute_tokens
+		sample_annotation -- translation
+		sample_annotation -- size
+		sample_annotation -- rotation
+		sample_annotation -- prev
+		sample_annotation -- next
+		sample_annotation -- num_lidar_pts
+		sample_annotation -- num_radar_pts
+		label="sample_annotation"
+		graph[style=dashed]
+	}
+	subgraph cluster_instance {
+		instance -- instance_token
+		instance -- category_token
+		instance -- nbr_annotations
+		instance -- first_annotation_token
+		instance -- last_annotation_token
+		label="instance"
+		graph[style=dashed]
+	}
+	subgraph cluster_map {
+		map -- map_category
+		map -- map_token
+		map -- filename
+		map -- log_tokens
+		label="map"
+		graph[style=dashed]
+	}
+	subgraph cluster_sample_data {
+		sample_data -- sample_data_token
+		sample_data -- sample_token
+		sample_data -- ego_pose_token
+		sample_data -- calibrated_sensor_token
+		sample_data -- timestamp
+		sample_data -- fileformat
+		sample_data -- is_key_frame
+		sample_data -- height
+		sample_data -- width
+		sample_data -- filename
+		sample_data -- prev_data
+		sample_data -- next_data
+		label="sample_data"
+		graph[style=dashed]
+	}
+	subgraph cluster_sensor {
+		sensor -- sensor_token
+		sensor -- channel
+		sensor -- modality
+		label="sensor"
+		graph[style=dashed]
+	}
+	subgraph cluster_attribute {
+		attribute -- attribute_token
+		attribute -- name
+		attribute -- attribute_description
+		label="attribute"
+		graph[style=dashed]
+	}
+	subgraph cluster_sample{
+		sample -- sample_token
+		sample -- timestamp
+		sample -- prev_sample
+		sample -- next_sample
+		sample -- scene_token
+		label="sample"
+		graph[style=dashed]
+		
+	}
+	subgraph cluster_scene {
+		scene -- scene_token
+		scene -- log_token
+		scene -- nbr_samples
+		scene -- first_sample_token
+		scene -- last_sample_token
+		scene -- name
+		scene -- description
+		label="scene"
+		graph[style=dashed]
+	}
+	subgraph cluster_ego_pose {
+		ego_pose -- ego_pose_token
+		ego_pose -- timestamp
+		ego_pose -- rotation
+		ego_pose -- translation
+		label="ego pose"
+		graph[style=dashed]
+	}
+	subgraph cluster_log {
+		log -- log_token
+		log -- logfile
+		log -- vehicle
+		log -- date_captured
+		log -- location
+		label="log"
+		graph[style=dashed]
+	}
+	
+	subgraph cluster_visibility {
+		visibility -- visibility_description
+		visibility -- visibility_token
+		visibility -- level
+		label="visibility"
+		graph[style=dashed]
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

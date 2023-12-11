@@ -1,0 +1,26 @@
+digraph G {
+	Annotation[shape=doublecircle,label="Annotation\n1166187"]
+	Sample[shape=doublecircle, label="Sample\n34149"]
+	Data[shape=doublecircle, label="Pcd Data\n2631083"]
+	Visibility[label="Visibility\n4"]
+	Instance[label="Instance\n64386"]
+	Ego_pose[label="Ego pose\n2631083"]
+	Category[label="Category\n23"]
+	Scene[label="Scene\n850"]
+	Map[label="Map\n4"]
+	Log[label="Log\n68"]
+	Sensor[label="Sensor\n12"]
+	Calibrated_sensor[label="Calibrated sensor\n10200"]
+	Annotation -> Sample
+	Annotation -> Instance
+	Annotation -> Visibility
+	Data -> Sample
+	Data -> Ego_pose
+	Data -> Calibrated_sensor
+	Sample -> Scene
+	Calibrated_sensor -> Sensor
+	Instance -> Category
+	Scene -> Log
+	Scene -> Sample
+	
+}

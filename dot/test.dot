@@ -1,0 +1,7 @@
+graph g{
+	subgraph cluster_a {
+		egg; chiken; ham;
+		label="food";
+		graph[style=dotted];
+	}
+}

@@ -1,0 +1,112 @@
+=== No. 0 ===== calibrated_sensor.json ===== 10200 ======
+{
+  'camera_intrinsic': [],
+  'rotation': [0.9999984769132877, 0.0, 0.0, 0.0017453283658983088],
+  'sensor_token': '47fcd48f71d75e0da5c8c1704a9bfe0a',
+  'token': '7781065816974801afc4dcdaf6acf92c',
+  'translation': [3.412, 0.0, 0.5],
+}
+=== No. 1 ===== category.json ===== 23 ======
+{
+  'description': 'Adult subcategory.',
+  'name': 'human.pedestrian.adult',
+  'token': '1fa93b757fc74fb197cdd60001ad8abf',
+}
+=== No. 2 ===== sample_annotation.json ===== 1166187 ======
+{
+  'attribute_tokens': [],
+  'instance_token': '5e2b6fd1fab74d04a79eefebbec357bb',
+  'next': '',
+  'num_lidar_pts': 2,
+  'num_radar_pts': 0,
+  'prev': '5cd018cb2448415ab8aff4dc7256999a',
+  'rotation': [-0.04208490861058176, 0.0, 0.0, 0.9991140377690821],
+  'sample_token': 'c36eb85918a84a788e236f5c9eef2b05',
+  'size': [0.3, 0.291, 0.734],
+  'token': '2cd832644d09479389ed0785e5de85c9',
+  'translation': [993.884, 612.441, 0.675],
+  'visibility_token': '3',
+}
+=== No. 3 ===== instance.json ===== 64386 ======
+{
+  'category_token': '85abebdccd4d46c7be428af5a6173947',
+  'first_annotation_token': '173a50411564442ab195e132472fde71',
+  'last_annotation_token': '2cd832644d09479389ed0785e5de85c9',
+  'nbr_annotations': 13,
+  'token': '5e2b6fd1fab74d04a79eefebbec357bb',
+}
+=== No. 4 ===== map.json ===== 4 ======
+{
+  'category': 'semantic_prior',
+  'filename': 'maps/53992ee3023e5494b90c316c183be829.png',
+  'log_tokens': ['0986cb758b1d43fdaa051ab23d45582b', '1c9b302455ff44a9a290c372b31aa3ce', 'e60234ec7c324789ac7c8441a5e49731', '46123a03f41e4657adc82ed9ddbe0ba2', 'a5bb7f9dd1884f1ea0de299caefe7ef4', 'bc41a49366734ebf978d6a71981537dc', 'f8699afb7a2247e38549e4d250b4581b', 'd0450edaed4a46f898403f45fa9e5f0d', 'f38ef5a1e9c941aabb2155768670b92a', '7e25a2c8ea1f41c5b0da1e69ecfa71a2', 'ddc03471df3e4c9bb9663629a4097743', '31e9939f05c1485b88a8f68ad2cf9fa4', '783683d957054175bda1b326453a13f4', '343d984344e440c7952d1e403b572b2a', '92af2609d31445e5a71b2d895376fed6', '47620afea3c443f6a761e885273cb531', 'd31dc715d1c34b99bd5afb0e3aea26ed', '34d0574ea8f340179c82162c6ac069bc', 'd7fd2bb9696d43af901326664e42340b', 'b5622d4dcb0d4549b813b3ffb96fbdc9', 'da04ae0b72024818a6219d8dd138ea4b', '6b6513e6c8384cec88775cae30b78c0e', 'eda311bda86f4e54857b0554639d6426', 'cfe71bf0b5c54aed8f56d4feca9a7f59', 'ee155e99938a4c2698fed50fc5b5d16a', '700b800c787842ba83493d9b2775234a'],
+  'token': '53992ee3023e5494b90c316c183be829',
+}
+=== No. 5 ===== sample_data.json ===== 2631083 ======
+{
+  'calibrated_sensor_token': '7781065816974801afc4dcdaf6acf92c',
+  'ego_pose_token': 'bddd80ae33ec4e32b27fdb3c1160a30e',
+  'fileformat': 'pcd',
+  'filename': 'samples/RADAR_FRONT/n015-2018-07-18-11-07-57+0800__RADAR_FRONT__1
+               531883530440378.pcd',
+  'height': 0,
+  'is_key_frame': True,
+  'next': '90df03ad4710427aabb5f88fe049df2e',
+  'prev': '',
+  'sample_token': 'e93e98b63d3b40209056d129dc53ceee',
+  'timestamp': 1531883530440378,
+  'token': 'bddd80ae33ec4e32b27fdb3c1160a30e',
+  'width': 0,
+}
+=== No. 6 ===== sensor.json ===== 12 ======
+{
+  'channel': 'CAM_FRONT',
+  'modality': 'camera',
+  'token': '725903f5b62f56118f4094b46a4470d8',
+}
+=== No. 7 ===== attribute.json ===== 8 ======
+{
+  'description': 'Vehicle is moving.',
+  'name': 'vehicle.moving',
+  'token': 'cb5118da1ab342aa947717dc53544259',
+}
+=== No. 8 ===== sample.json ===== 34149 ======
+{
+  'next': '14d5adfe50bb4445bc3aa5fe607691a8',
+  'prev': '',
+  'scene_token': '73030fb67d3c46cfb5e590168088ae39',
+  'timestamp': 1531883530449377,
+  'token': 'e93e98b63d3b40209056d129dc53ceee',
+}
+=== No. 9 ===== scene.json ===== 850 ======
+{
+  'description': 'Construction, maneuver between several trucks',
+  'first_sample_token': 'e93e98b63d3b40209056d129dc53ceee',
+  'last_sample_token': '40e413c922184255a94f08d3c10037e0',
+  'log_token': '6b6513e6c8384cec88775cae30b78c0e',
+  'name': 'scene-0001',
+  'nbr_samples': 40,
+  'token': '73030fb67d3c46cfb5e590168088ae39',
+}
+=== No. 10 ===== ego_pose.json ===== 2631083 ======
+{
+  'rotation': [-0.7504501527141022, -0.0076295847961364415, 0.00847103369020136, -0.6608287216181199],
+  'timestamp': 1531883530440378,
+  'token': 'bddd80ae33ec4e32b27fdb3c1160a30e',
+  'translation': [1010.1273947164545, 610.7727090350685, 0.0],
+}
+=== No. 11 ===== log.json ===== 68 ======
+{
+  'date_captured': '2018-07-18',
+  'location': 'singapore-onenorth',
+  'logfile': 'n015-2018-07-18-11-07-57+0800',
+  'token': '6b6513e6c8384cec88775cae30b78c0e',
+  'vehicle': 'n015',
+}
+=== No. 12 ===== visibility.json ===== 4 ======
+{
+  'description': 'visibility of whole object is between 0 and 40%',
+  'level': 'v0-40',
+  'token': '1',
+}
+

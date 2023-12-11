@@ -1,0 +1,26 @@
+digraph G {
+	rankdir="LR"
+	subgraph cluster_info {
+		label="Build stage, class initialization, basic information registry."
+		a[label="create_groundtruth_database", shape="parallelogram"]
+		b[label="DATASET"]
+		c[label="NuScenesDataset"]
+		d[label="Det3DDataset"]
+		e[label="BaseDataset"]
+		f[label="LoadPointsFromFile"]
+		g[label="LoadPointsFromSweeps"]
+		h[label="LoadPointsFromAnnotations3D"]
+		i[label="parse_data_info", shape="rectangle"]
+		j[label="points_in_rbbox", shape="rectangle"]
+		a->b
+		c->b
+		d->c
+		e->d
+		f->e
+		g->e
+		h->e
+		c->i
+		a->j
+		
+	}
+}

@@ -1,0 +1,13 @@
+digraph a {
+	rankdir="LR";DetDataPreprocessor
+	a[label="Base3DDenseHead", shape="polygon"]
+	b[label="BaseModel"]
+	a -> b
+	
+	c[label="Det3DDataPreprocessor", shape="polygon"]
+	d[label="DetDataPreprocessor"]
+	a -> c
+	c -> d
+	
+	
+}

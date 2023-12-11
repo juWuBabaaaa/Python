@@ -1,0 +1,17 @@
+digraph A {
+	a[label="voxelize", shape="box"]
+	b[label="voxel_layer", shape="box"]
+	c[label="VoxelizationByGridShape", shape="house"]
+	
+	d[label="Det3DDataPreprocessor", shape="house"]
+	e[label="DetDataPreprocessor", shape="house"]
+	f[label="voxelization", shape="box"]
+	h[label="_Voxelization", shape="house"]
+	d -> e
+	d -> a
+	a -> b
+	b -> c
+	c -> f
+	f -> h
+	
+}

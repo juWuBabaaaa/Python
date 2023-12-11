@@ -1,0 +1,97 @@
+calibrated_sensor
+calibrated_sensor -- token
+calibrated_sensor -- sensor_token
+calibrated_sensor -- translation
+calibrated_sensor -- rotation
+calibrated_sensor -- camera_intrinsic
+
+category
+category -- token
+category -- name
+category -- description
+
+sample_annotation
+sample_annotation -- token
+sample_annotation -- sample_token
+sample_annotation -- instance_token
+sample_annotation -- visibility_token
+sample_annotation -- attribute_tokens
+sample_annotation -- translation
+sample_annotation -- size
+sample_annotation -- rotation
+sample_annotation -- prev
+sample_annotation -- next
+sample_annotation -- num_lidar_pts
+sample_annotation -- num_radar_pts
+
+instance
+instance -- token
+instance -- category_token
+instance -- nbr_annotations
+instance -- first_annotation_token
+instance -- last_annotation_token
+
+map
+map -- category
+map -- token
+map -- filename
+map -- log_tokens
+
+sample_data
+sample_data -- token
+sample_data -- sample_token
+sample_data -- ego_pose_token
+sample_data -- calibrated_sensor_token
+sample_data -- timestamp
+sample_data -- fileformat
+sample_data -- is_key_frame
+sample_data -- height
+sample_data -- width
+sample_data -- filename
+sample_data -- prev
+sample_data -- next
+
+sensor
+sensor -- token
+sensor -- channel
+sensor -- modality
+
+attribute
+attribute -- token
+attribute -- name
+attribute -- description
+
+sample
+sample -- token
+sample -- timestamp
+sample -- prev
+sample -- next
+sample -- scene_token
+
+scene
+scene -- token
+scene -- log_token
+scene -- nbr_samples
+scene -- first_sample_token
+scene -- last_sample_token
+scene -- name
+scene -- description
+
+ego_pose
+ego_pose -- token
+ego_pose -- timestamp
+ego_pose -- rotation
+ego_pose -- translation
+
+log
+log -- token
+log -- logfile
+log -- vehicle
+log -- date_captured
+log -- location
+
+visibility
+visibility -- description
+visibility -- token
+visibility -- level
+
