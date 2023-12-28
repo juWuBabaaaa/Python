@@ -14,5 +14,8 @@ mim install 'mmdet>=3.0.0'
 
 ls | head -4 ##显示前4个文件
 
+# Create data
+```python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes```
+
 # Train
-python tools/train.py configs/pointpillars/pointpillars_hv_fpn_sbn-all_8xb2-amp-2x_nus-3d.py
+```python tools/train.py configs/pointpillars/pointpillars_hv_fpn_sbn-all_8xb2-amp-2x_nus-3d.py```
