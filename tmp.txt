@@ -1,27 +1,11 @@
-"/usr/include/pcl-1.10/pcl/2d",
-"/usr/include/pcl-1.10/pcl/apps",
-"/usr/include/pcl-1.10/pcl/common",
-"/usr/include/pcl-1.10/pcl/compression",
-"/usr/include/pcl-1.10/pcl/console",
-"/usr/include/pcl-1.10/pcl/features",
-"/usr/include/pcl-1.10/pcl/filters",
-"/usr/include/pcl-1.10/pcl/geometry",
-"/usr/include/pcl-1.10/pcl/impl",
-"/usr/include/pcl-1.10/pcl/in_hand_scanner",
-"/usr/include/pcl-1.10/pcl/io",
-"/usr/include/pcl-1.10/pcl/kdtree",
-"/usr/include/pcl-1.10/pcl/keypoints",
-"/usr/include/pcl-1.10/pcl/ml",
-"/usr/include/pcl-1.10/pcl/octree",
-"/usr/include/pcl-1.10/pcl/outofcore",
-"/usr/include/pcl-1.10/pcl/people",
-"/usr/include/pcl-1.10/pcl/range_image",
-"/usr/include/pcl-1.10/pcl/recognition",
-"/usr/include/pcl-1.10/pcl/registration",
-"/usr/include/pcl-1.10/pcl/sample_consensus",
-"/usr/include/pcl-1.10/pcl/search",
-"/usr/include/pcl-1.10/pcl/segmentation",
-"/usr/include/pcl-1.10/pcl/stereo",
-"/usr/include/pcl-1.10/pcl/surface",
-"/usr/include/pcl-1.10/pcl/tracking",
-"/usr/include/pcl-1.10/pcl/visualization"
+From theoretical aspect, this work gives a thorough explanation of mode collapse
+and mode mixture by the regularity theory of optimal transportation developed by Figalli (2018
+Fields medalist) and the reasons why standard GANs/VAEs cannot solve this problem perfectly.
+(ii) From practical aspect, this work proposes a novel model called AE-OT, which first encodes
+the data manifold into the latent space, then compute the Brenier potential to represent the optimal
+transportation map in the latent space. The Figalli’s singularity set can be located efficiently and
+avoided when generating new samples. In this way, our model eliminates mode collapse and
+mode mixture successfully. (iii) The algorithm for finding the Brenier potential and the optimal
+transportation map can be accelerated with GPU based convex optimization algorithm. The method
+converges to the unique global optimum with bounded error estimate. (iv) Our experiment results
+demonstrate the efficiency and efficacy of the proposed method.
