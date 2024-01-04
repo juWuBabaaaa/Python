@@ -1,11 +1,11 @@
 # Data3dPreprocessing 
 
-"""Points / Image pre-processor for point clouds / vision-only / multi-
-    modality 3D detection tasks.
+"""Points / Image pre-processor for point clouds / vision-only / multi-modality 3D detection tasks.
+**多功能**
 
     It provides the data pre-processing as follows
 
-    - Collate and move image and point cloud data to the target device.
+    - Collate(核对) and move image and point cloud data to the target device.
 
     - 1) For image data:
 

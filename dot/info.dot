@@ -1,0 +1,13 @@
+digraph G{
+	rankdir="LR"
+	info -> sample_idx;
+	info -> token
+	info -> timestamp
+	info -> ego2global
+	info -> lidar_points
+	lidar_points -> lidar_path
+	lidar_points -> num_pts_feats
+	lidar_points -> lidar2ego
+	info -> lidar_sweeps
+	lidar_sweeps -> lidar_points2 -> data_path
+}

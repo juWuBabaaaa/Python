@@ -64,6 +64,57 @@ $$P=RP_W+t$$
 
 相机的外参决定了相机的位姿. 
 
+似乎，旋转矩阵R是正交矩阵,$R^T=R^{-1}$
+
+# Quaternions 四元数
+
+四元数的优势在于表示旋转. 
+Quaternions are cool. Even if you don't want to use them, you might need to defend yourself from quaternion fanatics.
+
+## Why can't we invert vectors in $\mathbb{R}^3$?
+
+$\mathbb{R}^1, \mathbb{R}^2$中元素可以求逆（复数），但是$\mathbb{R}^3$不能.
+
+$$q_0+q_1i+q_2j+q_3k$$
+$$i^2=j^2=k^2=ijk=-1$$
+
+共轭： $q^*$
+
+$qq^*=|q|^2$
+
+$$q^{-1}=\frac{q^*}{|q|^2}$$
+
+单位四元数$|q|=1$，可以表示为$$q=\cos\frac{\theta}{2}+\sin\frac{\theta}{2}\hat{\bold{n}}$$
+
+($q^{-1}=q^*$)
+
+令$x=0+\mathbf{x}$为一纯四元数，
+令$x'=qxq^*$
+则$x'$是$x$绕$\hat{\bold{n}}$旋转$\theta$角后的一个纯四元数.
+
+**这是单位四元数的几何意义**
+
+## Remark
+给一四元数，可以得到旋转轴和旋转角，以及旋转矩阵.
+
+## Pitch, yaw, roll
+
+**There are in fact six degrees of freedom of a rigid body moving in three-dimensional space.**
+
+forward/back, up/down, left/right, pitch, yaw, roll.
+
+* pitch: nose up or tail up.
+* yaw: nose moves from side to side.
+* roll: a circular (clockwise or anticlockwise) movement of the body as it moves forward.
+
+# nuscenes
+
+## Sensor synchronization
+
+摄像机一直开着，这很费电的啊。
+
+为了在激光雷达和相机之间实现良好的跨模态数据对齐，当顶部激光雷达扫过相机视场中心时，会触发相机的曝光。图像的时间戳为曝光触发时间;激光雷达扫描的时间戳为当前激光雷达帧实现全旋转的时间。鉴于相机的曝光时间几乎是瞬时的，这种方法通常会产生良好的数据对齐。**请注意，摄像机以12Hz运行，而激光雷达以20Hz运行。12个相机曝光尽可能均匀地分布在20个激光雷达扫描中，因此并非所有激光雷达扫描都有相应的相机帧**。将摄像机的帧率降低到12Hz有助于降低感知系统的计算、带宽和存储需求。
+
 # AE-OT generator
 
 ## 值得注意的点

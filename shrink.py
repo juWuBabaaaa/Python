@@ -30,12 +30,41 @@ with open(scene_p) as w:
 # 3. select sample
 # remark: anno[:1753]
 # remark: data[:6135]
-scene_new = scene[:2]
-sample_new = sample[:80]  # next
+# scene keys:   'token', 'log_token', 'nbr_samples', 'first_sample_token', 'last_sample_token', 
+#               'name', 'description'
+# anno keys:    'token', 'sample_token', 'instance_token', 'visibility_token', 'attribute_tokens',
+#               'translation', 'size', 'rotation', 'prev', 'next', 'num_lidar_pts', 'num_radar_pts'
+# data keys:    'token', 'sample_token', 'ego_pose_token', 'calibrated_sensor_token', 'timestamp', 
+#               'fileformat', 'is_key_frame', 'height', 'width', 'filename', 'prev', 'next'
+scene_new = scene[:68]
+# # to detect selected scenes.
+# print(scene[0].keys())
+# for j, i in enumerate(scene_new):
+#     print(j, " ", i["nbr_samples"], " ", i["description"])
+lt = scene_new[-1]["last_sample_token"]
+for i, j in enumerate(sample):
+    if j["token"] == lt:
+        indice_sample = i+1
+        print("sample", indice_sample)
+
+
+sample_new = sample[:indice_sample]  # next
 
 sample_new_id = [i["token"] for i in sample_new]
-anno_new = anno[:1753]
-data_new = data[:6135]
+tmp = []
+for i, j in enumerate(anno):
+    if j["sample_token"] in sample_new_id:
+        tmp.append(i)
+indice_anno = len(tmp)
+print("anno ", indice_anno)
+tmp1 = []
+for i, j in enumerate(data):
+    if j["sample_token"] in sample_new_id:
+        tmp1.append(i)
+indice_data = len(tmp1)
+print("data ", indice_data)
+anno_new = anno[:indice_anno]
+data_new = data[:indice_data]
 
 sample_new[-1]["next"] = ""
 
