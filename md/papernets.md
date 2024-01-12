@@ -380,3 +380,74 @@ $$\det D^2u(x)=\frac{f(x)}{g\circ \bigtriangledown u(x)}$$
 当深度学习热潮褪去之后，这批学者在学术界做经典的研究就会比较吃力.
 
 
+# Computer Vision
+## LIDAR-based or RGB-D-based
+在自动驾驶或者机器视觉有广泛应用。
+
+* Voxel-based 3D convolutional networks: retention of information (尽可能保留数据中的信息)。
+  * 缺点：
+    * slow inference speed
+    * low orientation estimation 
+  
+### Second （Sparsely Embeded CONvolutional Detection）
+**关键词： 3D object detection; convolutional neural networks; LIDAR; autonomous driving**
+对基于Voxel-based 网络提出improved sparse convolution method，显著提升了训练和推断的时间；同时提出一种新形式的angle loss regression 以提升模型预测方向（旋转角）的表现力。最后提出了一种数据增强的方式增加收敛速度和表现。该模型在Kitti 3D 目标检测上取得了当时第一的结果，并且保持了较快的预测速度。
+
+处理图像时的方法不能直接应用在LiDAR数据上。
+
+对汽车的2D图像检测AP达到90%，但是3D image-based car detection只有15%。
+
+**Detectors**
+#### 视频点云融合
+很多现有的3D detectors采用图像和视频融合的办法。
+* 将点云转换成2D鸟瞰图
+* 或者投影到图像上
+然后使用2D CNN 提取特征，然后再使用融合的方法融合各视图下的特征。
+
+#### VoxelNet 
+组合了
+* raw point cloud feature extraction
+* voxel-based feature extraction
+两个过程。
+
+这是目前最好的方法，可是计算量太大，难以用于实时推断。
+
+# 共形几何与计算共形映射
+共形映射又叫保角映射。
+
+共形几何是纯数学中很多个领域的交叉。例如黎曼曲面几何、微分几何、代数曲线、代数拓扑、偏微分几何、复分析以及很多其他相关领域。
+随着3维数字扫描技术的发展，急需建立有效表示、处理和利用大量3D曲面的方法。
+
+共形几何有用是基于以下几个理由：
+* 日常中所有曲面具有共形结构
+* 共形结构比黎曼度量结构光滑，比拓扑结构严格。它能处理变形，这是黎曼几何做不到的。它在变形过程中保留几何信息，而拓扑方法丢失了大量信息。
+* 共形映射容易操控。例如，两个简单连通闭曲面之间的共形映射构成一个6维空间。因此固定3个点，这个映射就唯一确定了。这个事实使得共形几何方法在曲面匹配和比较上很有价值。
+* 共性映射保留局部形状，因此便于可视化。
+* 所有曲面根据拱形结构可以分类，所有等价类形成一个有限维流形。这个流形有丰富的几何结构，可以被分析和研究。
+* 日常中的所有曲面可以变形到3种经典的空间：球面、平面、圆盘（双曲空间）。
+
+## Introduction
+### 共形几何的魅力
+**所有三维空间种的几何问题可以转换到二维平面中的问题，而且这种转换由少量的几个参数控制。**
+The power comes from the following fact:
+*All surfaces in real life can be deformed to three canonical shapes: the sphere, the plane and the disk. The deformation preserves angles and is determined by a small number of control parameters, such as several landmarks. Therefore, all geometric problems in three dimensional Euclidean space $\mathbb{R}^3$ can be converted to two dimensional problems on the plance.*
+
+* 黎曼度量是一种测量曲面上曲线长度的结构；
+* 共形结构仅测量曲线夹角的结构；
+* 拓扑结构是提供邻居信息。
+
+粗略的说：共形结构比黎曼结构更灵活，比拓扑结构更严格。
+### 黎曼映射
+
+两个曲面间的共形映射保持角度（保角）。
+#### 黎曼映射定理
+任何简单联通闭曲面（有单一的边界）（拓扑圆盘），可以保角地映射到单位圆盘上。
+#### 一般几何结构
+一个曲面不能被一个坐标系覆盖（？）。
+#### 计算共形映射算法
+
+3D扫描产生了大量3D数据。处理它们是一个挑战。
+共形映射为此提供了有力工具，**它可以将3D曲面转换到经典的2D区域**，将3D问题变为2D问题。
+
+同伦群、同调群、上同调群可以直接使用离散网格计算，不需要近似。
+
